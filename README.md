@@ -1,6 +1,6 @@
 # allitebooks-dl
 
-A node js app for scraping the free ebooks site allitebooks.com, and downloading all the books from it. Used to practice web scraping using node js and cheerio
+A node js app for scraping the free ebooks site allitebooks.com, and downloading ebooks from it. Used to practice web scraping using node js and cheerio
 
 
 ### Installing
