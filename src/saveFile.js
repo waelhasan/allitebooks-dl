@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require('fs');
 const progress = require('request-progress');
 const request = require('request');
+const shell = require('shelljs');
 
 const NoProgressHandler = require('./NoProgressHandler');
 const logProgress = require('./logProgress');
@@ -9,7 +10,7 @@ const logProgress = require('./logProgress');
 const saveFile = (filePath, fileLink) => {
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir))
-        fs.mkdirSync(dir);
+        shell.mkdir('-p', dir);
 
     const file = fs.createWriteStream(filePath);
 
