@@ -1,14 +1,17 @@
 {
-  "name": "allitbooks-dl",
+  "name": "allitebooks-dl",
   "version": "1.0.0",
-  "description": "",
+  "description": "A node js app for scraping the free ebooks site allitebooks.com, and downloading all the books from it. Used to practice web scraping using node js and cheerio",
   "main": "index.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  
+  "keywords": ["allitebooks", "web scraping", "node", "cheerio"],
+  "author": "Wael Hasan <aboeyas87@gmail.com>",
+  "license": "MIT",
+
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.88.0",
