@@ -1,6 +1,6 @@
 {
   "name": "allitebooks-dl",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A node js app for scraping the free ebooks site allitebooks.com, and downloading all the books from it. Used to practice web scraping using node js and cheerio",
   "main": "index.js",
   "scripts": {
