@@ -1,9 +1,10 @@
 const path = require("path");
 const fs = require('fs');
+const { downloadFile } = require('filedljs');
 
 const getFileLink = require('./getFileLink');
 const getFilePath = require('./getFilePath');
-const saveFile = require('./saveFile');
+const logProgress = require('./logProgress');
 const validateFileForDownload = require('./validateFileForDownload');
 
 const downloadFiles = async (pageNum, filesPagesLinks) => {
@@ -24,7 +25,10 @@ const downloadFiles = async (pageNum, filesPagesLinks) => {
             console.log('[!] INFO Downloading:', fileLink);
 
             if (!fs.existsSync(filePath))
-                await saveFile(filePath, fileLink);
+                await downloadFile(filePath, fileLink, {
+                    onProgress: logProgress,
+                    maxِAttempts: 3
+                });
             else
                 console.log('[!!] INFO Already downloaded:', filePath);
 
